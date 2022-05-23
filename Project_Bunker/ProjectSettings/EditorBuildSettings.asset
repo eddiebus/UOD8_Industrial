@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main Menu/Main Menu.unity
+    guid: 9041b333d3a84dd498c4205ff00b6b78
+  - enabled: 1
+    path: Assets/3D Bunker Testing/3D Bunker Scene Test.unity
+    guid: 5dbe11d08d53e3b4c9e16b2ff815e2e0
   m_configObjects: {}
