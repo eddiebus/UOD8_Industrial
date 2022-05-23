@@ -412,16 +412,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5339560161507550995, guid: 0e5c4af828d04dc468a06c8d626b4997, type: 3}
-      propertyPath: m_Depth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5339560161507550995, guid: 0e5c4af828d04dc468a06c8d626b4997, type: 3}
-      propertyPath: m_ClearFlags
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5339560161507550995, guid: 0e5c4af828d04dc468a06c8d626b4997, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 2147483647
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5c4af828d04dc468a06c8d626b4997, type: 3}

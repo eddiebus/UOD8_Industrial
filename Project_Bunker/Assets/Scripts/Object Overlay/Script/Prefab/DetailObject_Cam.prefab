@@ -46,10 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  DisplayObject: {fileID: 0}
+  LayerName: 
   ObjectDistance: 10
-  rotationVector: {x: 0, y: 0, z: 0}
-  objectScale: 1
+  maxObjectScale: 10
   rotationSpeed: 1
   TargetMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   TargetMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
@@ -81,10 +80,10 @@ Camera:
   field of view: 90
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 100
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
