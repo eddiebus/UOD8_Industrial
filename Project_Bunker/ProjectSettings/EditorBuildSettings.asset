@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Menu/Main Menu.unity
+    path: Assets/Scripts/Main Menu/Main Menu.unity
     guid: 9041b333d3a84dd498c4205ff00b6b78
   - enabled: 1
     path: Assets/3D Bunker Testing/3D Bunker Scene Test.unity
