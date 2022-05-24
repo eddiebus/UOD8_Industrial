@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5339560161507550994}
   - component: {fileID: 5339560161507550993}
   - component: {fileID: 5339560161507550995}
+  - component: {fileID: 3050873019784025464}
   m_Layer: 3
   m_Name: DetailObject_Cam
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822ca660c39480f4cbc639a0609593b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
   LayerName: 
   ObjectDistance: 10
   maxObjectScale: 10
@@ -95,3 +96,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3050873019784025464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339560161507550989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b86b80b9a14574db2108723cf00c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIObjectTag: UI
+  ScreenSize: {x: 0, y: 0, z: 0}
+  TargetSprite: {fileID: 21300000, guid: 5046494632877414da7d8c0f6f37478f, type: 3}
+  spriteColour: {r: 1, g: 1, b: 1, a: 1}
+  xPos: 0.5
+  yPos: 0.2
+  scale: 3

@@ -9,7 +9,7 @@ using UnityEngine;
  */
 public class ObjectDisplay : MonoBehaviour
 {
-    public bool Active = true;
+    public bool Active = false;
     public string LayerName;
     private GameObject DisplayObject;
     [Range(1,20)]
@@ -21,8 +21,18 @@ public class ObjectDisplay : MonoBehaviour
     [Range(0.2f,5)]
     public float rotationSpeed = 1;
 
+    public SpriteToScreen ToolTip;
+
     public Mesh TargetMesh;
     public Material TargetMaterial;
+
+
+    //Set script to be active or not
+    //E.g script is not interactive if false
+    public void SetActive(bool newBool)
+    {
+        Active = newBool;
+    }
 
     //Set the display Object with new mesh and material
     public void SetObject(Mesh newMesh, Material newMaterial)
@@ -59,8 +69,16 @@ public class ObjectDisplay : MonoBehaviour
     //Put display object in place
     private void SetDisplayObjectPos()
     {
-        DisplayObject.transform.localPosition = new Vector3(0, 0, ObjectDistance);
-        DisplayObject.transform.rotation = Quaternion.Euler(rotationVector);
+        if (Active == true)
+        {
+            DisplayObject.transform.localPosition = new Vector3(0, 0, ObjectDistance);
+            DisplayObject.transform.rotation = Quaternion.Euler(rotationVector);
+        }
+        else 
+        {
+            DisplayObject.transform.localPosition = new Vector3(0, 0, -100);
+            DisplayObject.transform.rotation = Quaternion.Euler(rotationVector);
+        }
     }
 
     //Update the display object setup
@@ -76,25 +94,25 @@ public class ObjectDisplay : MonoBehaviour
 
     private void RotAndScaleInput()
     {
-
-        if (!Active)
-        {
-            return;
-        }
         //Rotation
         Cursor.lockState = CursorLockMode.Locked;
         float x = rotationVector.x;
         float y = rotationVector.y;
         float z = rotationVector.z;
 
-
         float rotSpeedScale = 2; //Whole numbers are quick. Lower scale a tad
-        x += Input.GetAxis("Mouse Y") * rotationSpeed;
-        y -= Input.GetAxis("Mouse X") * rotationSpeed;
+        if (Active == true)
+        {
+            x += Input.GetAxis("Mouse Y") * rotationSpeed;
+            y -= Input.GetAxis("Mouse X") * rotationSpeed;
+        }
 
         rotationVector = new Vector3(x, y, z);
 
-        objectScale += Input.GetAxis("Mouse ScrollWheel");
+        if (Active == true)
+        {
+            objectScale += Input.GetAxis("Mouse ScrollWheel");
+        }
         if (objectScale < 0.5f)
         {
             objectScale = 0.5f;
@@ -126,17 +144,35 @@ public class ObjectDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ToolTip = GetComponent<SpriteToScreen>();
         CreateDisplayObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RotAndScaleInput();
+        if (Active == true)
+        {
+            RotAndScaleInput();
+        }
         //Update objects and properties
         SetDisplayObjectPos();
         SetSelfCamera();
         UpdateDisplayObjectConfig();
+
+
+        if (ToolTip)
+        {
+            if (Active == true)
+            {
+                ToolTip.SetColour(new Color(1, 1, 1, 1));
+            }
+            else
+            {
+                ToolTip.SetColour(new Color(1, 1, 1, 0));
+            }
+        }
+
         DebugCheck();
     }
 
