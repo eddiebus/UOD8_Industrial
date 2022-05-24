@@ -51,8 +51,9 @@ MonoBehaviour:
   ObjectDistance: 10
   maxObjectScale: 10
   rotationSpeed: 1
-  TargetMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
-  TargetMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  ToolTip: {fileID: 0}
+  TargetMesh: {fileID: 0}
+  TargetMaterial: {fileID: 0}
 --- !u!20 &5339560161507550995
 Camera:
   m_ObjectHideFlags: 0

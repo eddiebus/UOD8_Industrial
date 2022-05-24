@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a69a5d180b8ea046841a8aa16d5effa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 2
   PlayerBody: {fileID: 7972719682526316117}
   Active: 1
 --- !u!1 &7972719682261811493
@@ -176,7 +176,7 @@ GameObject:
   m_Layer: 0
   m_Name: First person player
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
