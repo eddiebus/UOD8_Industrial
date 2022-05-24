@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class mouselook : MonoBehaviour
 {
-    public float mouseSensitivity = 1.0f;
-    public Transform PlayerBody;
+    //If current script is ative
     public bool Active = true;
+    //Direction player is looking
+    private Vector3 _LookDirection;
+    public Vector3 LookDirection
+    {
+        get { return _LookDirection; }
+    }
+
+    //Mouse look sensitivity
+    public float mouseSensitivity = 1.0f;
+    public Transform PlayerBody; //Transform of parent object
     private float xRotation = 0f;
 
+    public void UpdateLookDirection()
+    {
+        _LookDirection = (PlayerBody.rotation * Quaternion.Euler(xRotation, 0f, 0f)) * Vector3.forward;
+    }
 
     public void SetActive(bool newBool)
     {
@@ -20,9 +33,7 @@ public class mouselook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Quaternion startRotation = PlayerBody.rotation;
-        Debug.Log($"The Start rotation is {startRotation}");
     }
-
 
     // Update is called once per frame
     void Update()
@@ -37,7 +48,17 @@ public class mouselook : MonoBehaviour
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             PlayerBody.Rotate(Vector3.up * mouseX);
         }
+        UpdateLookDirection();
+        DebugDraw();
 
+    }
+
+    private void DebugDraw()
+    {
+        if (Debug.isDebugBuild)
+        {
+            Debug.DrawRay(transform.position, _LookDirection, Color.black);
+        }
     }
 }
  
