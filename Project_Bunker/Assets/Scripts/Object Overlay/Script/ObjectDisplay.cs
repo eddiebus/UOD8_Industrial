@@ -11,17 +11,24 @@ public class ObjectDisplay : MonoBehaviour
 {
     public bool Active = false;
     public string LayerName;
+
     private GameObject DisplayObject;
+    [TextArea(3,5)]
+    public string ObjectDescription;
+
     [Range(1,20)]
     public float ObjectDistance;
     private Vector3 rotationVector = new Vector3(0,0,0);
+    private Vector3 DefaultObjectScale = new Vector3(0,0,0);
     private float objectScale = 1;
-    [Range(2,10)]
+    [Range(1,2.5f)]
     public float maxObjectScale = 10;
     [Range(0.2f,5)]
     public float rotationSpeed = 1;
 
     public SpriteToScreen ToolTip;
+    public TextToScreen screenText;
+    public UnityEngine.Font TextFont;
 
     public Mesh TargetMesh;
     public Material TargetMaterial;
@@ -34,6 +41,25 @@ public class ObjectDisplay : MonoBehaviour
         Active = newBool;
     }
 
+
+    public void SetObject(GameObject newObject)
+    {
+        MeshFilter meshComp = newObject.GetComponent<MeshFilter>();
+        MeshRenderer meshRenderComp = newObject.GetComponent<MeshRenderer>();
+        
+        if (meshComp && meshRenderComp)
+        {
+            TargetMesh = meshComp.sharedMesh;
+            TargetMaterial = meshRenderComp.sharedMaterial;
+            DefaultObjectScale = newObject.transform.localScale;
+        }
+    }
+
+    public void SetObjectDesc(string newDescription)
+    {
+        ObjectDescription = newDescription;
+    }
+
     //Set the display Object with new mesh and material
     public void SetObject(Mesh newMesh, Material newMaterial)
     {
@@ -44,6 +70,28 @@ public class ObjectDisplay : MonoBehaviour
     public void SetObjectDistance(float newDistance)
     {
         ObjectDistance = newDistance;
+    }
+
+
+    private void SetDescText()
+    {
+        screenText.SetFont(TextFont);
+        screenText.TextString = ObjectDescription;
+        screenText.SetSize(new Vector2(
+            Screen.width * 0.8f,
+            Screen.height * 0.3f));
+        screenText.SetPosition(new Vector2(
+            Screen.width /2,
+            Screen.height * 0.2f));
+
+        if (Active)
+        {
+            screenText.SetColour(new Color(1, 1, 1, 1));
+        }
+        else
+        {
+            screenText.SetColour(new Color(0, 0, 0, 0));
+        }
     }
 
     //Set camera for self
@@ -121,7 +169,10 @@ public class ObjectDisplay : MonoBehaviour
             objectScale = maxObjectScale;
         }
 
-        DisplayObject.transform.localScale = new Vector3(objectScale, objectScale, objectScale);
+        DisplayObject.transform.localScale = new Vector3(
+            DefaultObjectScale.x * objectScale, 
+            DefaultObjectScale.y * objectScale, 
+            DefaultObjectScale.z * objectScale);
     }
 
     //Debugging Function
@@ -146,6 +197,7 @@ public class ObjectDisplay : MonoBehaviour
     void Start()
     {
         ToolTip = GetComponent<SpriteToScreen>();
+        screenText = GetComponent<TextToScreen>();
         CreateDisplayObject();
     }
 
@@ -172,6 +224,11 @@ public class ObjectDisplay : MonoBehaviour
             {
                 ToolTip.SetColour(new Color(1, 1, 1, 0));
             }
+        }
+
+        if (screenText)
+        {
+            SetDescText();
         }
 
         DebugUpdate();
