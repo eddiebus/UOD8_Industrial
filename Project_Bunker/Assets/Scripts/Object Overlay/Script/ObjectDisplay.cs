@@ -100,7 +100,6 @@ public class ObjectDisplay : MonoBehaviour
         float y = rotationVector.y;
         float z = rotationVector.z;
 
-        float rotSpeedScale = 2; //Whole numbers are quick. Lower scale a tad
         if (Active == true)
         {
             x += Input.GetAxis("Mouse Y") * rotationSpeed;
