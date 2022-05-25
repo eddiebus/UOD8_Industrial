@@ -21,7 +21,7 @@ public class SpriteToScreen : MonoBehaviour
     [Range(0.2f,10)]
     public float scale = 1;
 
-    public bool InitUI()
+    private bool InitUI()
     {
         UIObject = new GameObject("SpriteLabel");
         //Find Default UI Layer
@@ -32,7 +32,6 @@ public class SpriteToScreen : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Error Object {this.gameObject.name}. Couldn't find Canvas Object with Tag 'UI'");
             return false;
         }
 

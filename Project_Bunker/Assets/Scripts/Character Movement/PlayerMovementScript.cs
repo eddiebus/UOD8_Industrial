@@ -41,11 +41,6 @@ public class PlayerMovementScript : MonoBehaviour
             Vector3 move = transform.right * x + transform.forward * z;
             controller.Move(move * speed * Time.deltaTime);
 
-            if (Debug.isDebugBuild)
-            {
-                Debug.Log($"X Move Input {x}");
-                Debug.Log($"Z Move Input {z}");
-            }
         }
 
         velocity.y += gravity * Time.deltaTime;
