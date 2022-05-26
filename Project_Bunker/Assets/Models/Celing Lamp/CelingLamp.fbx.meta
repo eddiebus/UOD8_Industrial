@@ -3,7 +3,12 @@ guid: cb6c0ea7e3b08d34fa3141280268a0e7
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: h_ceilinglamp_mat
+    second: {fileID: 2100000, guid: a2315a0c75e0aa041a7bae9da8d6dea7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: c21e2ce168705d04f9221af08da39142
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlastDoor_mat
+    second: {fileID: 2100000, guid: d1a0a1402dc06414aa5b4ec38f95795d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
