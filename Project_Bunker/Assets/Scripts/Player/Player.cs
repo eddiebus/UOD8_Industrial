@@ -86,7 +86,10 @@ public class Player : MonoBehaviour
             InteractiveObject InteractiveComp = closestObject.GetComponent<InteractiveObject>();
             if (InteractiveComp)
             {
-                InteractiveComp.Glow();
+                if (InObjDisplay == false)
+                {
+                    InteractiveComp.Glow();
+                }
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     InObjDisplay = true;

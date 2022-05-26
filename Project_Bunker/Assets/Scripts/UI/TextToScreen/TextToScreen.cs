@@ -7,6 +7,7 @@ public class TextToScreen : MonoBehaviour
 {
     private bool InitOK = false;
     public Font TextFont;
+    public int TextSize = 10;
     [TextArea(1,5)]
     public string TextString;
     public Color TextColour;
@@ -26,8 +27,6 @@ public class TextToScreen : MonoBehaviour
             newPos.x,
             newPos.y,
             1);
-
-
     }
 
     public void SetSize(Vector2 newSize)
@@ -84,7 +83,16 @@ public class TextToScreen : MonoBehaviour
         TextComp.font = TextFont;
         TextComp.text = TextString;
         TextComp.color = TextColour;
-        TextComp.resizeTextForBestFit = true;
+        if (TextSize > 0)
+        {
+            TextComp.resizeTextForBestFit = false;
+            TextComp.fontSize = TextSize;
+        }
+        else
+        {
+            if (TextSize < 0) { TextSize = 0; }
+            TextComp.resizeTextForBestFit = true;
+        }
         TextComp.alignment = TextAlign;
     }
 
