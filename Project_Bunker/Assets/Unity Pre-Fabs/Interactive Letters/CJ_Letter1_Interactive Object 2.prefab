@@ -98,22 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GalleryObjPrefab: {fileID: 1791869283835053626, guid: 0fe13cdffb7708b4c9a895ca2e6de174, type: 3}
-  GalleryObjDesc: "Dear Jeanie, \n\nI know you'll never read this letter, the NDA
-    means I can't tell anyone about what we're doing here, not even you. It's for
-    myself that I'm writing this. I just needed to feel like I could talk to somebody
-    about this, even if it's just a piece of paper I'm confiding in. Funny that I
-    never saw the point in a diary until now, having seen what I've seen. \n\nThe
-    things we're doing here, in this bunker, they're not ethical. The higher ups
-    tell us that the experiment is of the highest priority for the American people.
-    Apparently, this is our contingency plan, our last resort if the missiles are
-    truly fired. \n\nAt first I understood, I could shovel away a thousand dead rats
-    for such important endeavours, especially if it meant I could save someone like
-    you. But now... I'm not so sure it's worth it. We've made no progress with the
-    rats and small mammals, and apparently now we have permissions to test on larger
-    subjects, monkeys and apes. It's unnecessary barbarism. I swear there was intelligence
-    in that creature. I saw the light fade from her eyes. I don't know how much more
-    I can stomach. \n\nIt pains me that you'll never know what changed me so much,
-    Jeanie. \n\nYours, \nCarl."
+  GalleryObjDesc: "Dear Jeanie, \r\n\r\nThe first human test subjects for the Suspended
+    Animation project came in today. They said they were criminals, murderers, but
+    I don't know if I trust the word of our managers anymore. \r\n\r\nCriminals or
+    not, they shouldn't be here. How could they do this? It's a death sentence. I
+    want to speak up, but I know it's no use. I want to quit, but I'm scared of what
+    they'll do to me if they think I might go public. I feel like such a coward,
+    Jeanie.  \r\n\r\nThis is wrong, but there's nothing I can do."
   GlowTime: 0
   GlowFadeSpeed: 1
   GlowColour: {r: 0.9997994, g: 1, b: 0.3443396, a: 0}
