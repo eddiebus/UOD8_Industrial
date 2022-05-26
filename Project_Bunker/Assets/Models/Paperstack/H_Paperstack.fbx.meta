@@ -3,7 +3,12 @@ guid: 542c434473f85794197a28b2c18066d8
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: h_paperstack_mat
+    second: {fileID: 2100000, guid: 1e6ad6a43d6e1f546acd528ab7249b95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: a648185d756414e43bd94df04c59c747
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: h_coatpegs_mat
+    second: {fileID: 2100000, guid: 177db7ea5037bba4ca812bed28fcb59a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
