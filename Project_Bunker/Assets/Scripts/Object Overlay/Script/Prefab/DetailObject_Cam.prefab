@@ -48,10 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Active: 0
   LayerName: 
+  ObjectDescription: 
   ObjectDistance: 10
   maxObjectScale: 10
   rotationSpeed: 1
   ToolTip: {fileID: 0}
+  screenText: {fileID: 0}
+  TextFont: {fileID: 0}
   TargetMesh: {fileID: 0}
   TargetMaterial: {fileID: 0}
 --- !u!20 &5339560161507550995

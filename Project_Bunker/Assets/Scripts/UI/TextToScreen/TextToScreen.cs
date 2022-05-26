@@ -15,18 +15,27 @@ public class TextToScreen : MonoBehaviour
     public RectTransform RectComp;
 
     public string UIObjectTag;
-    public GameObject UIObject;
+    private GameObject UIObject;
+    private GameObject BGImageObj;
+    private UnityEngine.UI.Image BGImageComp;
+    private RectTransform BGImageRect;
 
     public void SetPosition(Vector2 newPos)
     {
-        UIObject.transform.position = new Vector3(
+        BGImageObj.transform.position = new Vector3(
             newPos.x,
             newPos.y,
             1);
+
+
     }
 
     public void SetSize(Vector2 newSize)
     {
+        if (!InitOK)
+        {
+            return;
+        }
         RectComp.sizeDelta = newSize;
     }
 
@@ -48,9 +57,18 @@ public class TextToScreen : MonoBehaviour
         GameObject parentObj = GameObject.FindGameObjectWithTag(UIObjectTag);
         if (parentObj)
         {
-            UIObject.transform.SetParent(parentObj.transform);
             TextComp = UIObject.AddComponent<UnityEngine.UI.Text>();
             RectComp = UIObject.GetComponent<RectTransform>();
+
+            BGImageObj = new GameObject("BG_Image");
+            BGImageObj.transform.SetParent(parentObj.transform);
+            BGImageComp = BGImageObj.AddComponent<UnityEngine.UI.Image>();
+            BGImageComp.color = new Color(0, 0, 0, 0.2f);
+            BGImageRect = BGImageObj.GetComponent<RectTransform>();
+
+
+            UIObject.transform.SetParent(BGImageObj.transform);
+
         }
         else
         {
@@ -70,9 +88,10 @@ public class TextToScreen : MonoBehaviour
         TextComp.alignment = TextAlign;
     }
 
-    private void UpdateRect()
+    private void SetBGParam()
     {
-        RectComp.anchoredPosition = transform.position;
+        BGImageComp.color = new Color(0, 0, 0, 0.5f * TextComp.color.a);
+        BGImageRect.sizeDelta = RectComp.sizeDelta;
     }
 
     private void UpdateObjName()
@@ -101,6 +120,7 @@ public class TextToScreen : MonoBehaviour
         {
             SetTextParam();
             UpdateObjName();
+            SetBGParam();
         }
     }
 }

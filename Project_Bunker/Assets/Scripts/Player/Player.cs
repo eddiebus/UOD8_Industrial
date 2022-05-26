@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
     [Range(0.1f,10f)]
     public float InterationDistance = 1;
 
-    public string GalleryObjTag;
     public bool InObjDisplay; 
 
     private bool Init()
@@ -123,6 +122,9 @@ public class Player : MonoBehaviour
 
     private void DebugDraw()
     {
-        Debug.DrawRay(MainCamObj.transform.position, lookComp.LookDirection * InterationDistance, Color.yellow);
+        if (Debug.isDebugBuild)
+        {
+            Debug.DrawRay(MainCamObj.transform.position, lookComp.LookDirection * InterationDistance * 100, Color.yellow);
+        }
     }
 }

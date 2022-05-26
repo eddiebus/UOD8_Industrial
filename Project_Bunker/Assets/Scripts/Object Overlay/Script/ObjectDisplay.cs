@@ -72,7 +72,6 @@ public class ObjectDisplay : MonoBehaviour
         ObjectDistance = newDistance;
     }
 
-
     private void SetDescText()
     {
         screenText.SetFont(TextFont);
