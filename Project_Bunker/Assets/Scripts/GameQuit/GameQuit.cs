@@ -14,9 +14,13 @@ public class Quittingthegame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && (timeRemaining > 0))
         {
             timeRemaining -= Time.deltaTime;
+            
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) == false)
+        {
+            timeRemaining = 0;
 
         }
-
         else
         {
             Application.Quit();
