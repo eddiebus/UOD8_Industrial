@@ -154,7 +154,7 @@ public class ObjectDisplay : MonoBehaviour
 
         if (Active == true)
         {
-            x += Input.GetAxis("Mouse Y") * rotationSpeed;
+            x -= Input.GetAxis("Mouse Y") * rotationSpeed;
             y -= Input.GetAxis("Mouse X") * rotationSpeed;
         }
 

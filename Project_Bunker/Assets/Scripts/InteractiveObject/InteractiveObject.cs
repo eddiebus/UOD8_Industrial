@@ -20,6 +20,7 @@ public class InteractiveObject : MonoBehaviour
     private void Init()
     {
         ColourBlend = this.gameObject.AddComponent<ColourBlender>();
+        ColourBlend.FadeSpeed = 2;
     }
 
     public void Glow()

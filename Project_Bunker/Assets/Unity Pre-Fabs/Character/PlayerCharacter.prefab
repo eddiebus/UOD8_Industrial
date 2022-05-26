@@ -231,8 +231,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.5
-  m_Radius: 0.33
+  m_Height: 0.6
+  m_Radius: 0.39
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextFont: {fileID: 12800000, guid: 6734c6ae8b523c14995d315dab390f03, type: 3}
+  TextSize: 22
   TextString: 
   TextColour: {r: 0, g: 0, b: 0, a: 0}
   TextAlign: 4
