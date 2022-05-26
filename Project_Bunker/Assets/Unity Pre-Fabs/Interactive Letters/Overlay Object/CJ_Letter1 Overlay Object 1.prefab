@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2610386458985583397}
   - component: {fileID: 278383074922964975}
   m_Layer: 3
-  m_Name: CJ_Letter1 Overlay Object
+  m_Name: CJ_Letter1 Overlay Object 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

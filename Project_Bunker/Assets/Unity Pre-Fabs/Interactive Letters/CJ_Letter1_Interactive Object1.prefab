@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8876957164043102669}
   - component: {fileID: 3556474588453053734}
   m_Layer: 7
-  m_Name: CJ_Letter1_Interactive Object
+  m_Name: CJ_Letter1_Interactive Object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
