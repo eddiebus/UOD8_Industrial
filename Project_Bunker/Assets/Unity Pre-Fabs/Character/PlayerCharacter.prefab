@@ -195,6 +195,8 @@ GameObject:
   - component: {fileID: 5538621151953515290}
   - component: {fileID: 5538621151953515288}
   - component: {fileID: 5538621151597073072}
+  - component: {fileID: 2156869173405290724}
+  - component: {fileID: 346935596629972957}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -251,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5538621151953515290}
-  speed: 4
+  speed: 2.5
   gravity: -5
   jumpHeight: 3
   groundcheck: {fileID: 5538621150937087389}
@@ -278,8 +280,46 @@ MonoBehaviour:
   lookComp: {fileID: 0}
   playerMovementComp: {fileID: 0}
   objectDisplayComp: {fileID: 0}
+  GameQuitComp: {fileID: 0}
   InterationDistance: 2
   InObjDisplay: 0
+--- !u!114 &2156869173405290724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538621151953515291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ca72a1840bbc3489a888fd92fd6041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  counting: 0
+  timeRemaining: 3
+  maxTime: 3
+  screenText: {fileID: 0}
+--- !u!114 &346935596629972957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538621151953515291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52d766817afbbc419c01990bb722604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextFont: {fileID: 12800000, guid: eac35710b4b7ba840b11d1c5c6205e1a, type: 3}
+  TextSize: 10
+  TextString: 
+  TextColour: {r: 0, g: 0, b: 0, a: 0}
+  TextAlign: 4
+  TextComp: {fileID: 0}
+  RectComp: {fileID: 0}
+  UIObjectTag: UI
 --- !u!1001 &5538621151296351740
 PrefabInstance:
   m_ObjectHideFlags: 0

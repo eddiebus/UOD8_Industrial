@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public mouselook lookComp;
     public PlayerMovementScript playerMovementComp;
     public ObjectDisplay objectDisplayComp;
+    public GameQuit GameQuitComp;
     [Range(0.1f,10f)]
     public float InterationDistance = 1;
 
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
         playerMovementComp = GetComponentInChildren<PlayerMovementScript>();
         MainCamObj = GameObject.FindGameObjectWithTag("MainCamera");
         objectDisplayComp = GetComponentInChildren<ObjectDisplay>();
+        GameQuitComp = GetComponent<GameQuit>();
 
         if (lookComp && playerMovementComp && MainCamObj)
         {
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
                 lookComp.SetActive(true);
                 objectDisplayComp.SetActive(false);
                 objectDisplayComp.SetObjectDesc("");
+                GameQuitComp.SetActive(true);
             }
         }
     }
@@ -98,6 +101,7 @@ public class Player : MonoBehaviour
                     objectDisplayComp.SetActive(true);
                     objectDisplayComp.SetObject(InteractiveComp.GalleryObjPrefab);
                     objectDisplayComp.SetObjectDesc(InteractiveComp.GalleryObjDesc);
+                    GameQuitComp.SetActive(false);
                 }
             }
             else
@@ -125,9 +129,6 @@ public class Player : MonoBehaviour
 
     private void DebugDraw()
     {
-        if (Debug.isDebugBuild)
-        {
-            Debug.DrawRay(MainCamObj.transform.position, lookComp.LookDirection * InterationDistance * 100, Color.yellow);
-        }
+        Debug.DrawRay(MainCamObj.transform.position, lookComp.LookDirection * InterationDistance * 100, Color.yellow);
     }
 }
