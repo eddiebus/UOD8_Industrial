@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b687be731738654a808cf43901e0504
+guid: 946d06a35a23b2c4fa04f2ea0d7109db
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: h_blackboard_mat
-    second: {fileID: 2100000, guid: 9bc8c045fa914a048b4bfa6625bd5953, type: 2}
+      name: h_pipe1_mat
+    second: {fileID: 2100000, guid: 029d3a103e02d4f4585878cf0534cf65, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
