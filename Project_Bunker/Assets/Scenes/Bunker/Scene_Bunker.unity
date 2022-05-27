@@ -22117,22 +22117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CJ_Letter1_Interactive Object
       objectReference: {fileID: 0}
-    - target: {fileID: 8876957164043102669, guid: a24a9ddb4fdf2a142bc1d125ca8f4c2f, type: 3}
-      propertyPath: GlowColour.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876957164043102669, guid: a24a9ddb4fdf2a142bc1d125ca8f4c2f, type: 3}
-      propertyPath: GlowColour.b
-      value: 0.34509802
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876957164043102669, guid: a24a9ddb4fdf2a142bc1d125ca8f4c2f, type: 3}
-      propertyPath: GlowColour.r
-      value: 0.59239984
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876957164043102669, guid: a24a9ddb4fdf2a142bc1d125ca8f4c2f, type: 3}
-      propertyPath: GlowFadeSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24a9ddb4fdf2a142bc1d125ca8f4c2f, type: 3}
 --- !u!1001 &1942745582

@@ -107,7 +107,7 @@ MonoBehaviour:
     Jeanie.  \r\n\r\nThis is wrong, but there's nothing I can do."
   GlowTime: 0
   GlowFadeSpeed: 1
-  GlowColour: {r: 0.9997994, g: 1, b: 0.3443396, a: 0}
+  GlowColour: {r: 0.5447296, g: 1, b: 0, a: 0}
   ColourBlend: {fileID: 0}
 --- !u!65 &3556474588453053734
 BoxCollider:
